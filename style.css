@@ -1,0 +1,310 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color1: #ffffff;
+  --color2: #131212;
+  --color3: #b3b4ba;
+  --color4: #e2e2df;
+  --color5: #467d9a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color1);
+  height: 100%;
+}
+
+.navbar {
+  width: 1000px;
+  height: 40px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 16px auto;
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-title {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color1);
+}
+
+.navbar .navbar-title,
+.navbar .navbar-link {
+  margin: 0 32px;
+}
+
+.navbar .navbar-link a {
+  display: inline-block;
+  padding: 2px 16px;
+  color: var(--color1);
+}
+
+.navbar .navbar-link a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid var(--color1);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.navbar .navbar-link a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hero Section */
+.hero {
+  width: 97vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(image/2.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  margin: auto;
+  position: relative;
+}
+
+.hero .hero-item {
+  position: relative;
+  text-align: center;
+}
+
+.hero .hero-item .hero-name {
+  font-size: 78px;
+  color: var(--color1);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  animation: fade 0.5s linear;
+}
+
+.hero .hero-item .hero-desc {
+  display: inline-block;
+  max-width: 600px;
+  font-size: 16px;
+  color: var(--color1);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  animation: fade 0.8s linear;
+}
+
+/* Task Section */
+.task {
+  width: 97vw;
+  background-image: url(image/1.jpeg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid var(--color2);
+  border-radius: 30px;
+  position: relative;
+  margin: 120px auto;
+}
+
+.task .task-list {
+  display: flex;
+}
+
+.task .task-list .file {
+  width: 25%;
+  height: 200px;
+  margin: auto 105px;
+  border: solid 1px var(--color2);
+  border-radius: 20px;
+  box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.75);
+  animation: swipe-right 1s both;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+.task .task-list .task-card {
+  padding: 64px;
+}
+
+.task .task-list .task-card .task-name {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color5);
+  animation: swipe-left 1s both;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+.task .task-list .task-card .task-desc {
+  font-size: 24px;
+  margin-bottom: 45px;
+  color: #bbbbbb;
+  animation: swipe-left 1s both;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+.task .task-list .task-card .more {
+  color: var(--color1);
+  font-size: 14px;
+  background-color: var(--color5);
+  border: solid 3px var(--color5);
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin-right: 16px;
+  box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease;
+  animation: fade 1s both;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+.task .task-list .task-card .more:hover {
+  color: var(--color5);
+  background-color: var(--color1);
+  padding: 10px 18px;
+}
+
+/* .task .prev,
+.task .next {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  color: var(--color5);
+  padding: 16px;
+  margin: auto 64px;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  transition: 0.5 ease;
+  top: 20%;
+}
+
+.task .next {
+  right: 60%;
+}
+
+.task .prev:hover {
+  color: var(--color2);
+} */
+
+/* footer */
+.footer {
+  background-color: var(--color5);
+  padding: 70px 0;
+}
+
+.footer .container {
+  max-width: 1170px;
+  margin: auto;
+}
+.footer .container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .container .row .footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer .container .row .footer-col h4 {
+  font-size: 18px;
+  color: var(--color1);
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer .container .row .footer-col h4::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  background-color: var(--color1);
+  height: 2px;
+  width: 50px;
+}
+
+.footer .container .row .footer-col a {
+  font-size: 16px;
+  color: var(--color1);
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer .container .row .footer-col a:hover {
+  color: var(--color1);
+  padding-left: 8px;
+}
+.footer .container .row .footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--color1);
+  transition: all 0.5s ease;
+}
+.footer .container .row .footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: var(--color1);
+}
+
+/* keyframes */
+
+@keyframes fade {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipe-right {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes swipe-left {
+  from {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
